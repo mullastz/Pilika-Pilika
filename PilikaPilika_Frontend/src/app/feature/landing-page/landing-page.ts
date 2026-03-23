@@ -1,40 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { Footer } from '../../shared/footer/footer';
+import { Header } from '../../shared/header/header';
 @Component({
   selector: 'app-landing-page',
-  imports: [ CommonModule ],
+  imports: [ CommonModule, Footer, Header ],
   templateUrl: './landing-page.html',
   styleUrl: './landing-page.css'
 })
 
 export class LandingPage {
-
-    isDark = false;
-
-  ngOnInit() {
-    const saved = localStorage.getItem('theme');
-
-    this.isDark = saved === 'dark';
-
-    this.applyTheme();
-  }
-
-  toggleTheme() {
-    this.isDark = !this.isDark;
-
-    localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
-
-    this.applyTheme();
-  }
-
-  private applyTheme() {
-    if (this.isDark) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }
 
 activities = [
   { icon: 'fa-solid fa-user', label: 'Become Agent' },
