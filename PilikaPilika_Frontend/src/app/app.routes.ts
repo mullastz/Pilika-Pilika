@@ -6,6 +6,8 @@ import { ManageAccount } from './feature/manage-account/manage-account';
 import { Shipping } from './feature/shipping/shipping';
 import { History } from './feature/history/history';
 import { HelpCenter } from './feature/help-center/help-center';
+import { AgentPage } from './feature/agent-page/agent-page';
+
 
 
 export const routes: Routes = [
@@ -16,5 +18,7 @@ export const routes: Routes = [
   { path: 'account/history', component: History },
   { path: 'account/shipping', component: Shipping },
   { path: 'account/help', component: HelpCenter },
+  { path: 'agent/:id', component: AgentPage },
+
 
 ];
