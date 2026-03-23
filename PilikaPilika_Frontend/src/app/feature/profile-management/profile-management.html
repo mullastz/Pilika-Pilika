@@ -4,18 +4,24 @@
 
         <!-- ACCOUNT CARD -->
         <div class="bg-white dark:bg-[#1a1a1a] rounded-2xl shadow p-4 sm:p-6 transition-colors">
-        <!-- BACK BUTTON -->
-        <div class="max-w-5xl mx-auto ">
-            
-            <button 
-                (click)="goBack()"
-                class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white/10 dark:bg-[#1a1a1a] backdrop-blur-md   shadow hover:scale-110 transition"
-                aria-label="Go back"
-            >
-                <i class="fa-solid fa-arrow-left text-orange-500 text-md"></i>
-            </button>
+            <!-- TOP HEADER (BACK + TITLE) -->
+            <div class="flex items-center gap-3 mb-4">
 
-        </div>
+                <!-- BACK BUTTON -->
+                <button 
+                    (click)="goBack()"
+                    class="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-white/10 dark:bg-[#1a1a1a] backdrop-blur-md shadow hover:scale-110 transition flex items-center justify-center"
+                    aria-label="Go back"
+                >
+                    <i class="fa-solid fa-arrow-left text-orange-500 text-sm sm:text-base"></i>
+                </button>
+
+                <!-- TITLE -->
+                <h1 class="text-base sm:text-lg font-bold dark:text-white">
+                    Profile Settings
+                </h1>
+
+            </div>
             <!-- TOP SECTION -->
             <div class="flex items-center justify-between">
 
@@ -62,10 +68,10 @@
             <div class="flex flex-col gap-3 sm:gap-4">
 
                 <!-- ITEM -->
-                <div class="flex items-center justify-between bg-orange-200 dark:bg-[#111] p-3 sm:p-4 rounded-xl hover:scale-[1.02] transition cursor-pointer">
+                <div (click)="goTo('manage')" class="flex items-center justify-between bg-orange-200 dark:bg-[#111] p-3 sm:p-4 rounded-xl hover:scale-[1.02] transition cursor-pointer">
 
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-lg">
+                        <div  class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-lg">
                             <i class="fa-solid fa-user-gear"></i>
                         </div>
                         <span class="text-sm sm:text-base dark:text-white">Manage Account</span>
@@ -76,7 +82,7 @@
                 </div>
 
                 <!-- ITEM -->
-                <div class="flex items-center justify-between bg-orange-200 dark:bg-[#111] p-3 sm:p-4 rounded-xl hover:scale-[1.02] transition cursor-pointer">
+                <div (click)="goTo('shipping')" class="flex items-center justify-between bg-orange-200 dark:bg-[#111] p-3 sm:p-4 rounded-xl hover:scale-[1.02] transition cursor-pointer">
 
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-lg">
@@ -90,10 +96,10 @@
                 </div>
 
                 <!-- ITEM -->
-                <div class="flex items-center justify-between bg-orange-200 dark:bg-[#111] p-3 sm:p-4 rounded-xl hover:scale-[1.02] transition cursor-pointer">
+                <div (click)="goTo('history')" class="flex items-center justify-between bg-orange-200 dark:bg-[#111] p-3 sm:p-4 rounded-xl hover:scale-[1.02] transition cursor-pointer">
 
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-lg">
+                        <div  class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-lg">
                             <i class="fa-solid fa-clock-rotate-left"></i>
                         </div>
                         <span class="text-sm sm:text-base dark:text-white">History</span>
@@ -104,7 +110,7 @@
                 </div>
 
                 <!-- ITEM -->
-                <div class="flex items-center justify-between bg-orange-200 dark:bg-[#111] p-3 sm:p-4 rounded-xl hover:scale-[1.02] transition cursor-pointer">
+                <div (click)="goTo('help')" class="flex items-center justify-between bg-orange-200 dark:bg-[#111] p-3 sm:p-4 rounded-xl hover:scale-[1.02] transition cursor-pointer">
 
                     <div class="flex items-center gap-3">
                         <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-orange-500 flex items-center justify-center text-white text-lg">
